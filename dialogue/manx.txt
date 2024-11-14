@@ -1,0 +1,157 @@
+[enter]
+YOU: Good evening, sir.
+THEY: Good evening, good evening.
+
+
+[Death]
+YOU: I'm afraid there's been a death on board.
+THEY: How frightful. A guest?
+YOU: Yes, sir. A Mr. Buster Baines.
+THEY: Oh, the Texan fellow.
+LEARN: Texan
+LEARN: .knowsBB
+
+
+[Buster Baines] if .knowsBB
+YOU: Were you well acquainted with Mr. Baines?
+THEY: I have bumped into him during the dinners, yes. I can't say I know him...
+      knew him... well.
+
+
+[Katerina la Gata]?
+YOU: What can you tell me about the artist, Señorita la Gata?
+THEY: We had quite a pleasant conversation at dinner last night.
+
+      We talked about art, and the history of art, and why people started
+      to create art in the first place.
+
+      She's a fascinating woman.
+
+
+[Last Seen] if .knowsBB
+YOU: When did you last see Mr Baines?
+THEY: Last night? Or perhaps the night before.
+LEARN: Manx didn't see Baines
+
+
+[Last Seen] if Mrs Manx saw Baines, Manx didn't see Baines
+YOU: Sir, your wife says she saw Baines here.
+THEY: I'm sorry, then; perhaps I was not paying attention.
+
+
+[KM]?
+YOU: Have you any idea who KM might be?
+THEY: I am KM! Karl Manx!
+YOU: Have you seen this note?
+THEY: "I must see you again!"? This is... I don't believe this is addressed
+      to me.
+
+
+[Note] if Kitty Morgan
+YOU: I think this note might be addressed to you?
+THEY: "I must see you again!"? You are mistaken, sir. This is not to me.
+YOU: Ah, then I know who it is addressed to.
+
+
+[Doctor] if .knowsBB
+YOU: I understand you're a doctor?
+
+     Perhaps you could take a look at the victim.
+THEY: Ha, ha, ha!
+
+      I'm not a medical doctor! I'm a Doctor of Anthropology.
+LEARN: Anthropology
+
+
+[Kitty Morgan]?
+YOU: Do you know Kitty Morgan?
+THEY: Never heard of her. Should I have?
+
+
+[Lord Cheshire]?
+YOU: What can you tell me about Lord Cheshire?
+THEY: He always seems to be in here, usually with a drink in his hand.
+
+      I'm also given to understand he's a gambler -- but I don't go in for
+      that kind of thing myself.
+
+
+[Anthropology?] if Anthropology
+YOU: What is anthropology?
+THEY: From the Greek "anthropos", meaning man. I study humanity.
+
+
+[Egyptology] if Anthropology, Manx is an egyptologist
+YOU: Someone told me you're an Egyptologist?
+THEY: No, I'm an *Anthropologist*.
+
+      Egypt is just my current speciality. I've been writing a paper on belief
+      systems in ancient Egypt.
+LEARN: .speciality
+
+
+[Snoring]?
+YOU: Sir, some of the guests are complaining about your snoring.
+THEY: Nothing to be done about that, I'm afraid.
+
+      I've been a snorer for years.
+LEARN: Long-time snorer
+
+
+[Statue]?
+YOU: Have you seen this statue?
+THEY: Where did you get this? I've not seen it.
+
+      I... know nothing about it.
+
+      Perhaps I could take a closer look?
+YOU: I'm afraid it may be a clue to the reason behind Baines' death.
+
+     Perhaps you'll be able to see it when I've got to the bottom of this.
+
+
+[Statue]? if .speciality
+YOU: So you do know what this statue is?
+THEY: It's Bastet, of course. Egyptian goddess. This is an original idol, from
+      the early second dynasty!
+THEY: Perhaps I could hold onto it for a more detailed study?
+YOU: I think I'll keep it for now.
+THEY: I'd be very keen to see it again later. Very keen.
+LEARN: .bastet
+
+
+[Archeological theory]? if .bastet, .speciality
+YOU: What do you think about Cohen's theory that ancient Egyptians worshipped
+     humans?
+THEY: That is *my* theory! Cohen is trying to cash in on my big idea, with all
+      this press and expeditions.
+
+      It's *my* lifetime's work and I will not see him swoop in and steal the
+      glory!
+LEARN: .dedicated
+
+
+[Dedication] if .dedicated
+YOU: Would you kill to preserve your lifetime's work?
+THEY: I most certainly would not!
+
+
+[Calico Croker]?
+YOU: Do you know the housekeeper, Calico Croker?
+THEY: No.
+
+
+[Calico Croker] if Calico plot, .dedicated
+YOU: The housekeeper, Calico Croker, played you.
+THEY: I don't know what you're talking about, sir.
+YOU: She told you there was an important Egyptian artifact on board.
+THEY: I don't recall any such conversation.
+YOU: She hoped that you'd "acquire" it, and she might then take it off you,
+     seeing you as an easier mark than Mr. Baines.
+THEY: Preposterous!
+LEARN: Manx accused
+
+
+[Bye]
+YOU: Thank you for your time.
+THEY: That's quite all right.

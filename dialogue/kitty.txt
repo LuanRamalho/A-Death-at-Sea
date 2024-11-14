@@ -1,0 +1,105 @@
+[enter]
+YOU: Hello, madam.
+THEY: Hey up. How can I 'elp ya?
+YOU: I'm afraid there's been a death on board.
+THEY: Golly!
+YOU: It's a Mr. Baines.
+THEY: No!! Oh, god no.
+YOU: You know him?
+THEY: I do know 'im! Me an' 'im have been talking a lot. I was getting fond
+      of 'im.
+THEY: Oh, heck, that's so sad... so sad... *sniff*
+LEARN: .knows
+
+[enter] if .knows
+YOU: Hello again, madam.
+
+
+[Buster Baines] if .knows
+YOU: How did you meet Mr. Baines?
+THEY: I bumped into 'im just here outside my room. 'E was down here to
+      use the luggage room.
+
+      We got chattin' -- he was so nice!
+
+      'E was all "Howdy" and "Ahd shure like ter see yer agin".
+THEY: I can't believe 'e's dead... *sniff*
+LEARN: Luggage
+
+
+[Doctor Manx]?
+YOU: Do you know Doctor Manx?
+THEY: No.
+
+
+[Donnie Kibble]?
+YOU: Do you know Donnie Kibble?
+THEY: Yeah, I've chatted to 'im all right. E's nice too.
+LEARN: .donnie
+
+
+[Donnie Kibble] if .donnie, Donnie/Kitty
+YOU: Has Donnie make... advances towards you?
+THEY: I don't think so. Do you think he is interested?
+YOU: You will have to ask him that.
+
+
+[Pussy Galumps]?
+YOU: What can you tell me about Pussy Galumps?
+THEY: I saw her show in London...
+
+      I didn't like it much.
+THEY: Why, is she on board?
+
+
+[Note] if Note, .knows
+YOU: I found this note: "KM, meet me..." See?
+THEY: Oh, the poor man.
+
+      I think 'e was trying it on a bit, cheeky so-and-so. 'E told me he'd
+      leave me love notes in a thingummy on deck.
+
+
+[Newspaper] if .knows
+YOU: I see you have a newspaper. Might I take a quick look?
+THEY: Certainly, I'm done with it meself.
+LEARN: Newspaper
+
+
+[Cheshire/Pussy]?
+YOU: How about the Lord Cheshire story. You think there's any truth in it?
+THEY: Funny you should mention that. I used to work for 'im!
+
+      It was a few years ago, mind. I was 'is charwoman.
+
+      I'm sure it's true, the article. He was all over all kinds of women.
+LEARN: Kitty worked for Cheshire
+
+
+[Statue]?
+YOU: What do you think this thing is?
+THEY: Odd... I think I've seen it before. I read the newspapers. Perhaps
+      they've covered it.
+LEARN: .statue
+
+
+[Statue]? if .statue and Kitty worked for Cheshire
+YOU: Could you take a look again at this statue?
+THEY: I remember this! It was in Lord Cheshire's study.
+
+      I used to dust it. Ugly thing!
+LEARN: Cheshire owned statue
+
+
+[Statue]? if Kitty worked for Cheshire
+YOU: Have you seen this statue before?
+THEY: I remember this! It was in Lord Cheshire's study.
+
+      I used to dust it. Ugly thing!
+LEARN: Cheshire owned statue
+
+
+[Bye]
+YOU: I'll leave you in peace.
+THEY: That's all right. Come back if you want to chat some more.
+EXIT:

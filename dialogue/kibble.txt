@@ -1,0 +1,110 @@
+[enter]
+YOU: Hey, Donnie.
+THEY: Whatch-you want?
+YOU: There's been a murder.
+THEY: I bloody know there's been a murder. All the crew knows.
+THEY: You been going around blabbing to guests about it?
+LEARN: .knows
+
+
+[enter] if .knows
+THEY: Back again are ya?
+
+
+[About yourself]
+YOU: How life, Donnie?
+THEY: Tell the truth, I'm fed up of the ship life, I am.
+      I'm thinking of walkin' when we get back to London.
+
+
+[Buster Baines]
+YOU: Did you know Buster Baines?
+THEY: I know all the guests, yeah.
+
+      'E was a Yank. Always wearing a stupid hat -- from Texas or something.
+LEARN: .knowsBB
+
+
+[Last Seen]
+YOU: When did you last see Baines?
+THEY: Earlier, I guess, at the bar.
+
+
+[Kitty Morgan]?
+YOU: Do you know Kitty Morgan?
+THEY: Yeah, I do a bit. Mind your own business.
+
+
+[Pussy Galumps]?
+YOU: I see you've met Pussy Galumps.
+THEY: I've met everybody.
+
+
+[Smoking]?
+YOU: Do you smoke?
+THEY: I nip up on deck for one every now and again, why?
+LEARN: Kibble smokes
+
+
+[Smoking] if Calico smokes, Kibble smokes
+YOU: Do you meet up with others when you smoke? Calico, perhaps.
+THEY: Yeah, she an' I go for a fag every now and again.
+
+      Can't be seen smoking in front of the guests.
+LEARN: Smoke breaks
+
+
+[Calico Croker] if Smoke breaks
+YOU: What do you discuss on these smoke breaks?
+THEY: She tells me all the gossip.
+
+      She hears a lot, does Callie, what with going around all the guest rooms
+      making beds and what-have-you.
+LEARN: Calico Gossip
+
+
+[Gossip] if Calico Gossip
+YOU: Is there anything in particular you've heard recently?
+THEY: Oh, yeah! Calico told me that one of the guests was ranting to her about
+      being dumped. She's apparently going to nick something of his to get her
+      own back!
+
+      Can you believe it!? All this goes on under our noses.
+YOU: Wow.
+LEARN: Guest's revenge
+
+
+[KM]?
+YOU: Have you any idea who KM might be?
+THEY: Isn't it that Doctor fellow?
+
+
+[Kitty Morgan] if Donnie/Kitty
+YOU: You had a thing for Ms. Morgan, didn't you?
+THEY: How'd you know about that?
+
+      Calico, I'll bet.
+
+      Ok, so what if I did?
+LEARN: .love
+
+
+[Note] if Donnie/Kitty, .love
+YOU: You found this note, hidden in an cabinet on deck, didn't you?
+
+     Perhaps you even saw Mr. Baines leaving it.
+THEY: No.
+YOU: And you realised Baines was also interested in Ms. Morgan.
+THEY: No! Shut up, Billy!
+YOU: Did you want to get Baines out of the way? So you could have Kitty to
+     yourself?
+THEY: I didn't bloody kill him though!
+LEARN: Kibble accused
+
+[Statue]?
+YOU: Have you seen this statue before?
+THEY: No. Where d'you get it? Looks pretty flash. Probably worth a penny.
+
+[Bye]
+YOU: Thanks.
+THEY: Yeah, well, do me a favour and leave me outta this, alright?

@@ -1,0 +1,183 @@
+[enter]
+THEY: Ah, my good man, are you serving drinks?
+YOU: I'm afraid not. There has been a murder. A Mr. Baines.
+THEY: Oh, how ghastly.
+YOU: May I ask you a few questions?
+LEARN: .knows
+
+
+[enter] if .knows
+THEY: Ah, hello. Do you have my gin and tonic?
+
+
+[Kitty Morgan]?
+YOU: Do you know Kitty Morgan?
+THEY:
+   Ah, yes. The name rings a bell. I can't recall where from.
+   Perhaps it will come to me later.
+
+   Anything else?
+
+
+[Buster Baines]
+YOU: Did you know Buster Baines?
+THEY: Oh, gosh. Not well. We've been across a card table from one another.
+LEARN: Cards
+LEARN: .KnowsBB
+
+
+[About Buster Baines] if .KnowsBB
+YOU: Can you tell me about Mr. Baines?
+THEY: I don't know... perhaps a little.
+
+   He's a Texan. Hotelier, I believe.
+LEARN: Texan
+LEARN: Hotel
+
+
+[About yourself]
+YOU: What is it that you do, your lordship?
+THEY: What I do?
+YOU: Your work?
+THEY: Oh, I don't "work" as such. I'm more of an entrepreneur, an investor.
+
+      That, of course, and I dip my nose in at Westminster when I'm in town.
+
+
+[Doctor Manx]?
+YOU: Have you had any contact with Doctor Manx?
+THEY: Other than pleasantries at the bar, no.
+
+
+[Mrs. Manx]?
+YOU: What can you tell me about Mrs. Manx?
+THEY: I have the cabin next to the Manx's. How does she put up with his
+      snoring?
+
+      Honestly, it's keeping me awake at night.
+LEARN: Snoring
+
+
+[Last Seen] if .KnowsBB
+YOU: When was the last time you saw Mr. Baines?
+THEY: I saw him here at... say, around six-fifteen.
+
+   He ordered a martini -- I remember that because it looked pretty darned
+   delicious. So I ordered one too!
+
+
+[Cards]?
+YOU: You play cards?
+THEY: I'm a sucker for a game of poker, I'm afraid.
+
+
+[KM]?
+YOU: Do you know who KM might be?
+THEY: Hmm... KM... there's a great cocktail called a "Kicking Mickey".
+
+      It's gin, brandy and bitters, if I recall.
+YOU: Thats... not what I'm looking for.
+THEY: Ok, that makes one of us.
+
+
+[Statue]? if .KnowsBB
+YOU: Do you know the significance of this statue? It belonged to Mr. Baines.
+THEY: I've... never seen it before.
+
+
+[Statue]? if .KnowsBB, Cheshire owned statue
+YOU: I understand this statue is actually yours.
+
+     But I found it in Baines' luggage.
+THEY: It... Blast.
+
+      It *was* mine. Look, I had a bit of a loss at cards. I wagered it, and
+      Baines won it.
+THEY: I didn't have a hand in his death, though, let me reassure you of that.
+
+      I lost it fair and square and I don't welch on my wagers!
+THEY: Here, take my room key -- I signed a Bill of Sale to Baines. It's needed
+      for the provenance. You can find a copy of it in my room.
+LEARN: Cheshire's Cabin
+
+
+[What is the statue?] if Cheshire's Cabin
+YOU: What is this statue?
+THEY: It's an antique Egyptian statue of some sort. It's been in my possession
+      for years.
+
+      Got it at an auction, if I recall correctly.
+
+      Actually -- if I recall correctly, I bought it to impress a girl I knew
+      at the time who was into archeology.
+YOU: So you don't know its historical value?
+THEY: No --
+
+      Oh! She was a Persian Longhair. Jessica. Or was that Margaret?
+
+
+[Why did you have the statue?] if Cheshire's Cabin
+YOU: Why did you bring the statue on this trip?
+THEY: It was going to be a gift, to an Oriental businessman I'm meeting in New
+      York.
+
+      I have a business venture, you see -- we're planning to sell them
+      telephony equipment, actually -- and apparently a gift is the fashion
+      among the Nipponese.
+THEY: It's devastating to have lost it. I mean, it's not the expense -- though
+      that does pinch, it's true: the thing was worth a fortune.
+
+      But no, I imagine the deal will fall through now. That's the rub!
+LEARN: Statue importance
+
+
+[Cheshire's Cabin]?
+YOU: I'm sorry, what was your cabin number?
+THEY: I'm in 37, next to that awful snorer Manx.
+LEARN: Snoring
+LEARN: Cheshire's Room
+
+
+[Pussy Galumps]?
+YOU: Do you know Ms. Galumps?
+THEY: I know her well. "Pussy" isn't her real name, of course.
+
+
+[Pussy Galumps] if Cheshire/Pussy
+YOU: I understand you've been romantically linked to Ms. Galumps?
+THEY: Now, now... I won't comment on gossip.
+
+
+[Katerina la Gata] if Photo
+YOU: In your cabin, there's a photograph of Señorita la Gata.
+THEY: Oh, you know her! Isn't she wonderful?
+
+      An artist, a bon vivant -- I'm smitten!
+YOU: When did you meet?
+THEY: We met on board, my good fellow!
+
+      Chance!
+
+      Blind luck!
+LEARN: Cheshire/Katerina
+
+
+[Pussy Galumps] if Cheshire/Pussy, Cheshire/Katerina
+YOU: So the story in the newspaper about you and Ms. Galumps aren't true?
+THEY: Oh, well... Pussy's a lovely girl. We had dinner a couple of times back
+      at mine, in London.
+
+      But Katerina is a dream, an angel, a treasure.
+THEY: If you see her, will you tell her I said, "Hi!".
+LEARN: Pussy jilted
+
+
+[Calico Croker]?
+YOU: Do you know the housekeeper, Calico Croker?
+THEY: Only because she's been into my cabin. Quiet type?
+LEARN: Calico doesn't talk to Cheshire
+
+
+[Bye]
+THEY: Very well. Perhaps you could rustle up a gin and tonic? Thanks.
+EXIT:

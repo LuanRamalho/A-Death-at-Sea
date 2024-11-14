@@ -1,0 +1,108 @@
+[enter]
+YOU: Good evening, madam.
+THEY: Oh! How do you do?
+YOU: Madam... I'm afraid one of the guests has died.
+
+     I'm investigating how.
+THEY: Oh my goodness! Who?
+YOU: A Mr. Buster Baines.
+THEY: That name doesn't ring a bell.
+LEARN: .told
+
+
+[Texan]?
+YOU: He was a Texan gentleman.
+THEY: Now I have seen a man in a Texan hat around. Perhaps that's him.
+LEARN: .knows
+
+
+[enter] if .told
+YOU: Hello again, madam.
+
+
+[About yourself]
+YOU: Madam, why are you heading to New York?
+THEY: My husband is presenting at a symposium. I'm hoping to do some shopping
+      on 34th Street!
+YOU: What is it that you do?
+THEY: I am in fashion. I modelled for a while, but now I'm working as a
+      designer for a label. I like it well enough.
+
+
+[Katerina la Gata]?
+YOU: What can you tell me about Katerina la Gata?
+THEY: Oh, I love her work! Have you seen it?
+
+
+[KM]?
+YOU: Have you any idea who KM might be?
+THEY: Those are my husband's initials!
+
+
+[Last Seen] if .knows
+YOU: When did you last see Mr. Baines?
+THEY: If it's the gentleman in the hat -- it was tonight at dinner. We sat
+      next to him at the first-class table.
+
+      I remember he was not talkative: he was writing something on a
+      slip of paper.
+LEARN: Wrote note
+LEARN: Mrs Manx saw Baines
+
+
+[Snoring] if Long-time snorer
+YOU: How do you put up with your husband's snoring?
+THEY: I usually sleep in another room.
+
+      It's was more of a problem when we started sharing a cabin, but that's
+      been much better for the last couple of nights.
+YOU: How so, if you don't mind me asking?
+THEY: I had the barman find me some sleeping pills.
+
+      They work a charm!
+LEARN: Sleeping pills
+
+
+[Statue]?
+YOU: Have you seen this statue before?
+THEY: No.
+
+
+[Lord Cheshire]?
+YOU: Have you met Lord Cheshire?
+THEY: No, but I've been hearing lots of gossip about him. How we's been linked
+      to her or her or her..
+LEARN: .gossip
+
+
+[Gossip] if .gossip, Cheshire/Pussy
+YOU: You read about Lord Cheshire in the newspaper?
+THEY: No, I actually heard about it from the lady who makes up our cabin.
+LEARN: Calico talks
+
+
+[Calico Croker]?
+YOU: Do you know the housekeeper, Calico Croker?
+THEY: Oh, that woman! She talks and talks, doesn't she? She's quite the gossip.
+LEARN: Calico talks
+
+
+[Calico Croker]? if Calico talks, Calico doesn't talk to Katerina, Calico doesn't talk to Cheshire, Calico doesn't talk to Pussy, Guest's revenge
+YOU: You say Calico Croker talks to you? What about?
+THEY: Stories. Other guests.
+
+      Apparently the Captain may be getting a divorce!
+
+      And Lord Cheshire lost a priceless antique in a game of cards the
+      other night!
+LEARN: Calico told Manx
+
+
+[Barman] if Sleeping pills, Kibble accused
+YOU: The barman gave you sleeping pills?
+THEY: The one over there, serving drinks in the lounge.
+LEARN: Kibble gave Mrs Manx pills
+
+
+[Bye]
+YOU: Thank you for speaking to me.

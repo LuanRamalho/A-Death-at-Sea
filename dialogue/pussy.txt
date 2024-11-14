@@ -1,0 +1,118 @@
+[enter]
+YOU: Ms. Galumps?
+THEY: Hello, sugar.
+YOU: I'd like to ask you a few questions about the death on board.
+THEY: Death?
+YOU: I'm afraid one of the guests has died, a Mr. Buster Baines.
+THEY: I'm sorry to hear that.
+LEARN: .death
+
+[enter] if .death
+THEY: Hello again, sugar.
+
+
+[Buster Baines]
+YOU: Did you know Buster Baines?
+THEY: I can't say I did.
+
+
+[About yourself]
+YOU: You live in New York, don't you?
+THEY: Born and raised!
+YOU: What were you doing in London?
+THEY: I was touring my act! You didn't hear?
+YOU: No.
+THEY: Well, maybe that's one reason it didn't go so well.
+
+      I've had great reviews on Broadway, but you Brits lack taste.
+
+
+[Lord Cheshire]?
+YOU: Do you know Lord Cheshire?
+THEY: I'm fed up of you people sticking your noses into my private life.
+
+
+[Lord Cheshire] if Cheshire/Katerina
+YOU: Did you know Lord Cheshire has been romantically linked to Katerina la
+     Gata?
+THEY: That's... none of my business.
+
+
+[Lord Cheshire] if Pussy jilted
+YOU: You and Lord Cheshire were an item, weren't you?
+THEY: I...
+YOU: And he finished it with you on board this ship, didn't he?
+THEY: ...That man is a loser!
+
+      We were making plans for dinner in New York, for drinks, parties...
+
+      And now he's all over *her*!
+
+
+[Statue]?
+YOU: Have you seen this statue before?
+THEY: Darling, I'm not interested in your trinkets.
+
+
+[KM]?
+YOU: Have you any idea who KM might be?
+THEY: No, sorry.
+
+
+[Note]? if Galumps note
+YOU: Have you seen this note before?
+THEY: No. Is B.B. the dead man?
+
+
+[Statue]? if Cheshire/Pussy
+YOU: Have you seen this statue before?
+THEY: I think I saw that in Lord Cheshire's house.
+
+
+[Cheshire's business] if Cheshire/Pussy
+YOU: Do you know why Lord Cheshire is going to New York?
+THEY: He told me he had some sort of business deal with a Japanese, worth a
+      whole bucket of money!
+LEARN: .business
+
+
+[Katerina la Gata]?
+YOU: Do you know Katerina la Gata?
+THEY: Apparently, she's "angelic". No. I do not know her and I don't want to.
+
+
+[Katerina la Gata] if Pussy jilted
+YOU: You bear a grudge against Ms. la Gata?
+THEY: You bet I do!
+
+      But it's *him* I resent. There, I said it!
+LEARN: .resents
+
+
+[Revenge] if .resents, Guest's revenge, Cheshire owned statue, .business, Statue importance
+YOU: You wanted revenge on Lord Cheshire?
+THEY: Oh, well... not really...
+YOU: I think you plotted to steal his Egyptian statue.
+
+     You knew about his business deal, and that statue would make-or-break it.
+
+     You plotted to steal the statue so that the deal would fail.
+THEY: Maybe I thought about it! Maybe I even said it out loud. But I didn't
+      steal that statue! So no harm done.
+YOU: A man is dead.
+THEY: Well, what's he got to do with this?
+YOU: He owned the statue. Lord Cheshire lost it to him in a card game.
+THEY: Oh, gosh. Look, I'm not involved in that, Ok?
+LEARN: Pussy blabbed
+LEARN: Pussy didn't steal
+
+
+[Calico Croker]?
+YOU: Do you know the housekeeper, Calico Croker?
+THEY: Oh! I have chatted to her a bit. Well, it was mainly me talking.
+LEARN: Calico doesn't talk to Pussy
+
+
+[Bye]
+YOU: Thank you, Ms. Galumps.
+THEY: Any time.
